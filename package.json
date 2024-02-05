@@ -1,0 +1,43 @@
+{
+  "name": "@requrv/vue-apollo-async",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Use Vue3 Apollo Query/Mutation with async callback",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "author": "ReQurv <devops@requrv.io>",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "apollo",
+    "vue apollo",
+    "async apollo functions",
+    "useQuery vue",
+    "useMutation vue",
+    "async useQuery",
+    "async useMutation",
+    "Vue apollo mutation",
+    "vue apollo query",
+    "nuxt apollo",
+    "nuxt async query"
+  ],
+  "scripts": {
+    "dev": "yarn nodemon",
+    "build": "rimraf ./build && tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "git-cliff": "^1.4.0",
+    "nodemon": "^3.0.2",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2",
+    "tsc": "^2.0.4",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.8.8",
+    "@vue/apollo-composable": "^4.0.0-beta.11",
+    "graphql": "^16.8.1",
+    "vue": "^3.4.5"
+  }
+}
