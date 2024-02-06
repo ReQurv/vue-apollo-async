@@ -2,10 +2,14 @@ import { useMutation, useQuery } from "@vue/apollo-composable";
 import { ref } from "vue";
 const nullableVariables = ref();
 export default class ReQurvApollo {
+    onErr;
+    constructor(onErr) {
+        this.onErr = onErr;
+    }
     //#region QUERY
     useAsyncQuery(args) {
         const enableQuery = ref(false);
-        const { result, onResult, loading: queryLoading, onError, } = useQuery(args.document, args.variables ? args.variables : nullableVariables, () => ({
+        const { onResult, loading: queryLoading, onError, } = useQuery(args.document, args.variables ? args.variables : nullableVariables, () => ({
             enabled: enableQuery.value,
             notifyOnNetworkStatusChange: false,
             fetchPolicy: "network-only",
@@ -16,6 +20,8 @@ export default class ReQurvApollo {
                 if (!res.loading) {
                     enableQuery.value = false;
                     if (!res.data && res.errors) {
+                        if (this.onErr)
+                            this.onErr();
                         reject(res.error);
                     }
                     resolve(res);
@@ -23,11 +29,12 @@ export default class ReQurvApollo {
             });
             onError(err => {
                 enableQuery.value = false;
+                if (this.onErr)
+                    this.onErr();
                 reject(err);
             });
         });
         return {
-            result,
             apolloQuery,
             queryLoading,
         };
@@ -40,11 +47,15 @@ export default class ReQurvApollo {
             mutate();
             onDone(res => {
                 if (res.errors) {
+                    if (this.onErr)
+                        this.onErr();
                     reject(res.errors[0]);
                 }
                 resolve(res);
             });
             onError(err => {
+                if (this.onErr)
+                    this.onErr();
                 reject(err);
             });
         });

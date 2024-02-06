@@ -32,13 +32,19 @@ type ApolloSyncMutationArgs<TResult, TVariables> = {
 const nullableVariables = ref()
 
 export default class ReQurvApollo {
+    private onErr;
+
+    constructor(onErr?: () => void) {
+        this.onErr = onErr
+    }
+
+
     //#region QUERY
     public useAsyncQuery<TResult, TVariables extends OperationVariables>(
         args: ApolloSyncQueryArgs<TResult, TVariables>,
     ) {
         const enableQuery = ref(false);
         const {
-            result,
             onResult,
             loading: queryLoading,
             onError,
@@ -50,12 +56,13 @@ export default class ReQurvApollo {
 
         const apolloQuery = () =>
             new Promise<ApolloQueryResult<TResult>>((resolve, reject) => {
-            
+
                 enableQuery.value = true;
                 onResult(res => {
                     if (!res.loading) {
                         enableQuery.value = false;
                         if (!res.data && res.errors) {
+                            if (this.onErr) this.onErr()
                             reject(res.error);
                         }
                         resolve(res);
@@ -63,12 +70,12 @@ export default class ReQurvApollo {
                 });
                 onError(err => {
                     enableQuery.value = false;
+                    if (this.onErr) this.onErr()
                     reject(err);
                 });
             });
 
         return {
-            result,
             apolloQuery,
             queryLoading,
         };
@@ -89,11 +96,13 @@ export default class ReQurvApollo {
                 mutate();
                 onDone(res => {
                     if (res.errors) {
+                        if (this.onErr) this.onErr()
                         reject(res.errors[0]);
                     }
-                    resolve(res); 
+                    resolve(res);
                 });
                 onError(err => {
+                    if (this.onErr) this.onErr()
                     reject(err);
                 });
             });

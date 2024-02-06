@@ -14,8 +14,9 @@ type ApolloSyncMutationArgs<TResult, TVariables> = {
     options: (UseMutationOptions<TResult, TVariables> | Ref<UseMutationOptions<TResult, TVariables>> | ReactiveFunction<UseMutationOptions<TResult, TVariables>>) | undefined;
 };
 export default class ReQurvApollo {
+    private onErr;
+    constructor(onErr?: () => void);
     useAsyncQuery<TResult, TVariables extends OperationVariables>(args: ApolloSyncQueryArgs<TResult, TVariables>): {
-        result: Ref<TResult | undefined>;
         apolloQuery: () => Promise<ApolloQueryResult<TResult>>;
         queryLoading: Ref<boolean>;
     };
