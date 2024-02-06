@@ -31,6 +31,7 @@ type ApolloSyncMutationArgs<TResult, TVariables> = {
 
 const nullableVariables = ref()
 
+
 export default class ReQurvApollo {
     private onErr;
 
