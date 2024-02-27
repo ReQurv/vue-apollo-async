@@ -1,6 +1,6 @@
 {
   "name": "@requrv/vue-apollo-async",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "description": "Use Vue3 Apollo Query/Mutation with async callback",
   "main": "build/index.js",
