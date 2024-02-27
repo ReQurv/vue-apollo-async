@@ -24,7 +24,7 @@
   "scripts": {
     "dev": "yarn nodemon",
     "build": "rimraf ./build && tsc",
-    "release": "dotenv release-it --"
+    "release": "version && dotenv release-it --"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
