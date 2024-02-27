@@ -24,7 +24,7 @@
   "scripts": {
     "dev": "yarn nodemon",
     "build": "rimraf ./build && tsc",
-    "release": "dotenv -- release-it"
+    "release": "release-it"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
@@ -36,7 +36,6 @@
     "@release-it/keep-a-changelog": "^5.0.0",
     "@types/node": "^20.11.16",
     "auto-changelog": "^2.4.0",
-    "dotenv-cli": "^7.3.0",
     "nodemon": "^3.0.2",
     "release-it": "^17.1.1",
     "rimraf": "^5.0.5",
