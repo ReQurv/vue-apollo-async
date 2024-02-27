@@ -1,46 +1,11 @@
 {
-    "git": {
-        "requireCleanWorkingDir": true,
-        "requireBranch": false,
-        "requireUpstream": true,
-        "requireCommits": false,
-        "requireCommitsFail": true,
-        "commitsPath": "",
-        "addUntrackedFiles": false,
-        "commit": true,
-        "commitMessage": "Release ${version}",
-        "commitArgs": [],
-        "tag": true,
-        "getLatestTagFromAllRefs": false,
-        "tagAnnotation": "Release ${version}",
-        "tagArgs": [],
-        "push": true
-    },
-    "github": {
-        "release": true,
-        "releaseName": "Release ${version}",
-        "releaseNotes": null,
-        "autoGenerate": false,
-        "preRelease": false,
-        "draft": false,
-        "tokenRef": "GITHUB_TOKEN",
-        "assets": null,
-        "host": null,
-        "timeout": 0,
-        "proxy": null,
-        "skipChecks": false,
-        "web": false
-    },
-    "npm": {
-        "publish": true,
-        "publishPath": ".",
-        "publishArgs": [],
-        "tag": null,
-        "otp": null,
-        "ignoreVersion": false,
-        "allowSameVersion": false,
-        "versionArgs": [],
-        "skipChecks": false,
-        "timeout": 10
-    }
+  "git": {
+    "commitMessege": "chore: release v${version}"
+  },
+  "github": {
+    "release": true
+  },
+  "npm": {
+    "publish": true
+  }
 }

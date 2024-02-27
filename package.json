@@ -23,17 +23,20 @@
   ],
   "scripts": {
     "dev": "yarn nodemon",
-    "build": "rimraf ./build && tsc",
-    "release": "release-it"
+    "build": "rimraf ./build && tsc"
   },
   "publishConfig": {
+    "registry": "https://registry.npmjs.org",
     "access": "public"
   },
   "devDependencies": {
+    "@release-it/bumper": "^6.0.1",
+    "@release-it/conventional-changelog": "^8.0.1",
+    "@release-it/keep-a-changelog": "^5.0.0",
     "@types/node": "^20.11.16",
     "git-cliff": "^1.4.0",
     "nodemon": "^3.0.2",
-    "release-it": "^17.0.3",
+    "release-it": "^17.1.1",
     "rimraf": "^5.0.5",
     "ts-node": "^10.9.2",
     "tsc": "^2.0.4",
