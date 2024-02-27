@@ -611,6 +611,17 @@ async-retry@1.3.3:
   dependencies:
     retry "0.13.1"
 
+auto-changelog@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/auto-changelog/-/auto-changelog-2.4.0.tgz#a2d57d49b70ada7ca2e7c6a20a71572561d19cd9"
+  integrity sha512-vh17hko1c0ItsEcw6m7qPRf3m45u+XK5QyCrrBFViElZ8jnKrPC1roSznrd1fIB/0vR/zawdECCRJtTuqIXaJw==
+  dependencies:
+    commander "^7.2.0"
+    handlebars "^4.7.7"
+    node-fetch "^2.6.1"
+    parse-github-url "^1.0.2"
+    semver "^7.3.5"
+
 available-typed-arrays@^1.0.6, available-typed-arrays@^1.0.7:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/available-typed-arrays/-/available-typed-arrays-1.0.7.tgz#a5cc375d6a03c2efc87a553f3e0b1522def14846"
@@ -851,6 +862,11 @@ color-name@~1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
+
+commander@^7.2.0:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-7.2.0.tgz#a36cb57d0b501ce108e4d20559a150a391d97ab7"
+  integrity sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==
 
 compare-func@^2.0.0:
   version "2.0.0"
@@ -1575,48 +1591,6 @@ get-uri@^6.0.1:
     data-uri-to-buffer "^6.0.2"
     debug "^4.3.4"
     fs-extra "^11.2.0"
-
-git-cliff-darwin-arm64@1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/git-cliff-darwin-arm64/-/git-cliff-darwin-arm64-1.4.0.tgz#5e0ceaf9b9d626e992d9990f05e69bf9cedd75cc"
-  integrity sha512-QCCvi+gIP+2KXWBzCccIDF2GCNbpm9RND7HbDmU79uKP9Qp070ZSYxlqifph6bUxFFw7dRwlVHiKxyUADwnxSQ==
-
-git-cliff-darwin-x64@1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/git-cliff-darwin-x64/-/git-cliff-darwin-x64-1.4.0.tgz#934ed0e143966d1156935accc717c53e36df419b"
-  integrity sha512-9b+y3vC4J4G3X9ndNj0s8YiKV1IBux7yU5mDMZhcUA7g9gveoPo+eZZLyPl6+KHxoOE7GCgfHFIhhC+zwh/oWQ==
-
-git-cliff-linux-arm64@1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/git-cliff-linux-arm64/-/git-cliff-linux-arm64-1.4.0.tgz#a0dfbf64ffdc927c8c811b3b9f2ff071d63ac11c"
-  integrity sha512-caUW7eIkAXZKjzFgQKMlFia+9zkgjPPtnzXeZwkXjtDaSACbzqss+AvaxZUEVy+xfj14+RHOFTn6WCpQJ1NbGw==
-
-git-cliff-linux-x64@1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/git-cliff-linux-x64/-/git-cliff-linux-x64-1.4.0.tgz#6c6e37efd72eafe78febc8cddc19ff121ff042de"
-  integrity sha512-9HNuziC2ZsM1z1xrq+pRfFiH3LSdEwK1QyW/vngJP/f4GlO5Zm3tBX4n7Y+8yLUcyYMezKsR+rPF9MRmIswpgQ==
-
-git-cliff-windows-arm64@1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/git-cliff-windows-arm64/-/git-cliff-windows-arm64-1.4.0.tgz#ee60ed57525c9cd1b4ca5db21b9ee1009b187147"
-  integrity sha512-J0E/74+xowQfuLHHIB3KP6eFp+V39nhPVuAgNLnrLY28Yvqn8AGKCidQStisfjMS2Ot/a7yKFv1JwW/bR0lQjA==
-
-git-cliff-windows-x64@1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/git-cliff-windows-x64/-/git-cliff-windows-x64-1.4.0.tgz#9db6333b0ddf028c300798db6c16f5e871d4efb4"
-  integrity sha512-w/mOm00QEuu4VPkmJsyaSlaJtjo6kgvb9v7n81eZSj3SnpTRQzNXTjB1JzKavgqnJ6JnAQiypRmPwC1FsCyiFA==
-
-git-cliff@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/git-cliff/-/git-cliff-1.4.0.tgz#b15c8247089dc13ef770117e9c919b0718eaa7a1"
-  integrity sha512-BLHYp/BD5jfOoPA3B6Ht1s1rJxtPcpmgyjQFZSFP53AdjVyfI2kwk7aVmxEfd1RQsBHRBVfPyJ+PNVghsfo3Yg==
-  optionalDependencies:
-    git-cliff-darwin-arm64 "1.4.0"
-    git-cliff-darwin-x64 "1.4.0"
-    git-cliff-linux-arm64 "1.4.0"
-    git-cliff-linux-x64 "1.4.0"
-    git-cliff-windows-arm64 "1.4.0"
-    git-cliff-windows-x64 "1.4.0"
 
 git-raw-commits@^4.0.0:
   version "4.0.0"
@@ -2595,6 +2569,13 @@ node-fetch@3.3.2:
     fetch-blob "^3.1.4"
     formdata-polyfill "^4.0.10"
 
+node-fetch@^2.6.1:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.7.0.tgz#d0f0fa6e3e2dc1d27efcd8ad99d550bda94d187d"
+  integrity sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==
+  dependencies:
+    whatwg-url "^5.0.0"
+
 nodemon@^3.0.2:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-3.1.0.tgz#ff7394f2450eb6a5e96fe4180acd5176b29799c9"
@@ -2818,6 +2799,11 @@ parent-module@^1.0.0:
   integrity sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==
   dependencies:
     callsites "^3.0.0"
+
+parse-github-url@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/parse-github-url/-/parse-github-url-1.0.2.tgz#242d3b65cbcdda14bb50439e3242acf6971db395"
+  integrity sha512-kgBf6avCbO3Cn6+RnzRGLkUsv4ZVqv/VfAYkRsyBcgkshNvVBkRn1FEZcW0Jb+npXQWm2vHPnnOqFteZxRRGNw==
 
 parse-json@^5.2.0:
   version "5.2.0"
@@ -3548,6 +3534,11 @@ touch@^3.1.0:
   dependencies:
     nopt "~1.0.10"
 
+tr46@~0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
+  integrity sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==
+
 ts-essentials@^9.4.0:
   version "9.4.1"
   resolved "https://registry.yarnpkg.com/ts-essentials/-/ts-essentials-9.4.1.tgz#6a6b6f81c2138008a5eef216e9fa468d8d9e2ab4"
@@ -3790,6 +3781,19 @@ web-streams-polyfill@^3.0.3:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-3.3.3.tgz#2073b91a2fdb1fbfbd401e7de0ac9f8214cecb4b"
   integrity sha512-d2JWLCivmZYTSIoge9MsgFCZrt571BikcWGYkjC1khllbTeDlGqZ2D8vD8E/lJa8WGWbb7Plm8/XJYV7IJHZZw==
+
+webidl-conversions@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-3.0.1.tgz#24534275e2a7bc6be7bc86611cc16ae0a5654871"
+  integrity sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==
+
+whatwg-url@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-5.0.0.tgz#966454e8765462e37644d3626f6742ce8b70965d"
+  integrity sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==
+  dependencies:
+    tr46 "~0.0.3"
+    webidl-conversions "^3.0.0"
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"
