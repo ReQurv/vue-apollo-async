@@ -7,8 +7,5 @@
     "releaseName": "Release ${version}",
     "tokenRef": "GITHUB_TOKEN",
     "autoGenerate": true
-  },
-  "npm": {
-    "publish": true
   }
 }
